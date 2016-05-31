@@ -42,8 +42,13 @@ class TodoList
           puts "Error, You are trying to remove an item that doesn't exist"
         end
       end
-      def print_todo_list_items(todo_list)
-        todo_list.each {|item| puts "#{item.id} - #{item.title}            Completed: #{item.status} "}
+      def print_todo_list_items
+        puts "-"*30
+        puts
+        puts "#{self.title} Items"
+        puts
+        puts "-"*30
+        self.list_items.each_with_index {|item, index| puts "#{index+1} - #{item.item_title}            Completed: #{item.status} "}
       end
 
 
@@ -51,10 +56,11 @@ end
 
 class Item
     # methods and stuff go here
-    attr_accessor :item_title, :status
+    attr_accessor :item_title, :status, :id
     def initialize(item_name)
-      @item_name = item_title
+      @item_title = item_name
       @status = false
+
     end
 
 end
