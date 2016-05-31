@@ -17,17 +17,18 @@ my_todo_list.add_item_to_todo_list(item4)
 my_todo_list.print_todo_list_items
 
 # Delete the first item
-
+my_todo_list.remove_item_from_todo_list(item1)
 # Print the list
-
+my_todo_list.print_todo_list_items
 # Delete the second item
-
+my_todo_list.remove_item_from_todo_list(item2)
 # Print the list
-
+my_todo_list.print_todo_list_items
 # Update the completion status of the first item to complete
-
+my_todo_list.list_items[0].change_completion_status(true)
 # Print the list
-
+my_todo_list.print_todo_list_items
 # Update the title of the list
-
+my_todo_list.rename("Kareem's todo list afternoon")
 # Print the list
+my_todo_list.print_todo_list_items
