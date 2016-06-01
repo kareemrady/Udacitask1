@@ -49,3 +49,8 @@ kareem.create_new_todo_list("July's TodoList")
 kareem.list_all_todo_lists
 kareem.remove_todo_list("July's TodoList")
 kareem.list_all_todo_lists
+
+#testing item_is_completed? for Item Class
+puts
+puts "Testing is Item's is Completed method"
+puts "#{item3.item_title}  Completion Status is #{item3.is_completed?}"

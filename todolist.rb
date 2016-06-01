@@ -81,6 +81,8 @@ class TodoList
       def move_item_to_top(item)
         if included_in_todo_list?(item)
           @list_items.insert(0, item)
+          #added uniq method to not print the method moved to top twice - could be also avoided by adding an id instance variable 
+          @list_items.uniq!
         else
           puts "Error Item doesn't exist"
         end
@@ -92,23 +94,26 @@ class TodoList
         if completed_items.empty?
           puts "No completed items found"
         else
-          puts "-"*30
-          puts
-          puts "Completed Items in the #{@title} Todo List"
-          puts
-          puts "-"*30
-          puts "#{completed_items.each_with_index{|item, index| puts "#{index + 1} - #{item.item_title}"}}"
+          header =  "Completed Items in the #{@title} Todo List"
+          print_from_items_array_with_index(completed_items, header)
           puts
       end
     end
 
+    # As per Reviewer suggestion extracting a method to print an array to avoid DRY - Thanks alot :)
+
+    def print_from_items_array_with_index(arr, header)
+      puts "-"*30
+      puts
+      puts "#{header}"
+      puts
+      puts "-"*30
+      arr.each_with_index {|item, index| puts "#{item.print_item({index: index+1})}"}
+    end
+
       def print_todo_list_items
-        puts "-"*30
-        puts
-        puts "#{@title} Items"
-        puts
-        puts "-"*30
-        @list_items.each_with_index {|item, index| puts "#{index+1} - #{item.item_title}            Completed: #{item.status} "}
+        header =  "#{@title} Items"
+        print_from_items_array_with_index(@list_items, header)
       end
 
 
@@ -124,6 +129,17 @@ class Item
     end
     def change_completion_status(status)
       @status = status
+    end
+    def is_completed?
+      #return true or false based on the status instance value
+      @status
+    end
+
+    #made the index argument optional to allow the method to be used by the item class as well, if no index provided it will just print the item title and its staus with no index
+    def print_item(options = {})
+      index = options[:index] || nil
+      message = index.nil? ? "- #{@item_title}            Completed:#{@status}" : "#{index} - #{@item_title}            Completed:#{@status}"
+      print "#{message}"
     end
 
 end
