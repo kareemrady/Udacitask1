@@ -1,3 +1,15 @@
+commit 40c9c20acf125b16227ae532103a0f41c5865190
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 23:46:50 2016 +0000
+
+    Fixed Bugs , refactored code and added is_completed method for Item class
+
+commit 07eb60453868367cae0cca6849ccf0f0a4cda0d1
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:51:22 2016 +0000
+
+    Copied git log output to log.txt
+
 commit 146c779d72e92de50c25961884f3e219d4d5398b
 Author: Kareem Rady <kareem_rady@yahoo.com>
 Date:   Wed Jun 1 03:50:21 2016 +0000
