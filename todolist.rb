@@ -80,6 +80,24 @@ class TodoList
         end
       end
 
+      def print_completed_items
+        completed_items = []
+        @list_items.select do |item|
+          item.status == true
+          completed_items.push(item)
+        end
+        if completed_item.empty?
+          puts "No completed items found"
+        else
+          puts "-"*30
+          puts
+          puts "Completed Items in the #{@title} Todo List"
+          puts
+          puts "-"*30
+          puts "#{completed_items.each_with_index{|item, index| puts "#{index + 1} - #{item.item_title}"}}"
+      end
+    end
+
       def print_todo_list_items
         puts "-"*30
         puts
