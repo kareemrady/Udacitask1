@@ -73,20 +73,17 @@ class TodoList
       # end
 
       def move_item_to_top(item)
-        if included_in_todfo_list?(item)
+        if included_in_todo_list?(item)
           @list_items.insert(0, item)
         else
-          puts "Error Item doesn;t exist"
+          puts "Error Item doesn't exist"
         end
       end
 
       def print_completed_items
-        completed_items = []
-        @list_items.select do |item|
-          item.status == true
-          completed_items.push(item)
-        end
-        if completed_item.empty?
+        completed_items = @list_items.select {|item| item.status == true}
+
+        if completed_items.empty?
           puts "No completed items found"
         else
           puts "-"*30
@@ -95,6 +92,7 @@ class TodoList
           puts
           puts "-"*30
           puts "#{completed_items.each_with_index{|item, index| puts "#{index + 1} - #{item.item_title}"}}"
+          puts
       end
     end
 

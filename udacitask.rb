@@ -31,4 +31,9 @@ my_todo_list.print_todo_list_items
 # Update the title of the list
 my_todo_list.rename("Kareem's todo list afternoon")
 # Print the list
+
+#testing new features
+my_todo_list.print_todo_list_items
+my_todo_list.print_completed_items
+my_todo_list.move_item_to_top(item4)
 my_todo_list.print_todo_list_items
