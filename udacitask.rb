@@ -37,3 +37,15 @@ my_todo_list.print_todo_list_items
 my_todo_list.print_completed_items
 my_todo_list.move_item_to_top(item4)
 my_todo_list.print_todo_list_items
+
+#testing creating a new user
+kareem = User.new("Kareem", "Rady")
+kareem.create_new_todo_list("Tomorrow's TodoList")
+kareem.list_all_todo_lists
+kareem.create_new_todo_list("June's TodoList")
+kareem.create_new_todo_list("July's TodoList")
+#testing error of creating a list that already exists
+kareem.create_new_todo_list("July's TodoList")
+kareem.list_all_todo_lists
+kareem.remove_todo_list("July's TodoList")
+kareem.list_all_todo_lists

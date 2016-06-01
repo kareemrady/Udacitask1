@@ -2,27 +2,33 @@ class User
   attr_accessor :full_name, :todo_lists
   def initialize(first_name, last_name)
     @full_name = "#{first_name} #{last_name}"
-    @todo_lists = []
+    @todo_hash = {}
   end
   def create_new_todo_list(todo_list_name)
-    if !@todo_lists.include?(todo_list_name)
-      @todo_lists.push(TodoList.new(todo_list_name))
+    if !@todo_hash.keys.include?(todo_list_name)
+      @todo_hash[todo_list_name] = TodoList.new(todo_list_name)
     else
-      puts "Error Todo List already exists"
+      puts "----------------------------------"
+      puts "Error #{todo_list_name} already exists"
     end
   end
     def list_all_todo_lists
-      if @todo_lists.empty?
+    puts "-"*30
+    puts
+    puts "Listing all Todo Lists for user : #{@full_name}"
+    puts
+    puts "-"*30
+      if @todo_hash.empty?
         puts "No Todo List associated with user"
       else
-        @todo_lists.each_with_index {|todo, index| puts "#{index + 1} - todo.title"}
+        @todo_hash.keys.each_with_index {|key, index| puts "#{index +1} -  #{key} "}
     end
   end
-    def remove_todo_list(todo_list)
-      if @todo_lists.include?(todo_list) && @todo_lists.is_a?(TodoList)
-        @todo_lists.delete(todo_list)
+    def remove_todo_list(todo_list_name)
+      if @todo_hash.keys.include?(todo_list_name)
+        @todo_hash.delete(todo_list_name)
       else
-        puts "Error TodoList specified doesn't exist"
+        puts "Error creating TodoList specified doesn't exist"
       end
     end
   end
