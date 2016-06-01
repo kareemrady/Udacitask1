@@ -1,0 +1,59 @@
+commit 146c779d72e92de50c25961884f3e219d4d5398b
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:50:21 2016 +0000
+
+    added some test code to udacitask.rb and added the log.txt file
+
+commit 26805b834e8f6b143b3f28411e220ae437d6fe2d
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:47:56 2016 +0000
+
+    Fixed bugs
+
+commit 40c3845817347207085b97ca8baaa6576d59fae4
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:23:48 2016 +0000
+
+    Fixed bugs and tested move to top and print completed items features
+
+commit 69ad437ec47d80d05a53d557adbe6c62d23090c6
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:13:56 2016 +0000
+
+    Added print_completed_items feature
+
+commit 1a4ac6f686eafb56891d91eba9979907175a489c
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 03:05:30 2016 +0000
+
+    Added User class and move item to top feature
+
+commit cd8000f72e7a9ddaf68c4d2aa0b37924446fc440
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Wed Jun 1 02:47:30 2016 +0000
+
+    Added Features txt file and capturing all working code prior to adding feature 1
+
+commit a97bb94d78dfee398761f5d2c662b6f18d4d69b8
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Tue May 31 19:44:53 2016 +0000
+
+    Fixed Bugs and completed all basic functionalities required
+
+commit 1bc340a0b8c66bce1de1354db0c2127ef742ad14
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Tue May 31 19:23:00 2016 +0000
+
+    Fixed Bugs and Tested printing all items in a list
+
+commit 624bd5f319c03bcbb242872c337eb45e7afe0499
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Tue May 31 19:07:07 2016 +0000
+
+    Completed Todolist class & added Item initialize method
+
+commit f64e2a742bda1b1d1b817d22f547cafabff666b5
+Author: Kareem Rady <kareem_rady@yahoo.com>
+Date:   Tue May 31 18:30:10 2016 +0000
+
+    Initial Project Commit
