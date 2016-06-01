@@ -1,3 +1,32 @@
+class User
+  attr_accessor :full_name, :todo_lists
+  def initialize(first_name, last_name)
+    @full_name = "#{first_name} #{last_name}"
+    @todo_lists = []
+  end
+  def create_new_todo_list(todo_list_name)
+    if !@todo_lists.include?(todo_list_name)
+      @todo_lists.push(TodoList.new(todo_list_name))
+    else
+      puts "Error Todo List already exists"
+    end
+  end
+    def list_all_todo_lists
+      if @todo_lists.empty?
+        puts "No Todo List associated with user"
+      else
+        @todo_lists.each_with_index {|todo, index| puts "#{index + 1} - todo.title"}
+    end
+  end
+    def remove_todo_list(todo_list)
+      if @todo_lists.include?(todo_list) && @todo_lists.is_a?(TodoList)
+        @todo_lists.delete(todo_list)
+      else
+        puts "Error TodoList specified doesn't exist"
+      end
+    end
+  end
+
 class TodoList
   attr_accessor :title, :list_items
     def initialize(todo_list_name)
@@ -42,6 +71,14 @@ class TodoList
       #     puts "Error, You are trying to remove an item that doesn't exist"
       #   end
       # end
+
+      def move_item_to_top(item)
+        if included_in_todfo_list?(item)
+          @list_items.insert(0, item)
+        else
+          puts "Error Item doesn;t exist"
+        end
+      end
 
       def print_todo_list_items
         puts "-"*30

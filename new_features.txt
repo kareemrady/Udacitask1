@@ -1,4 +1,4 @@
 Feature #1: Move Item to top - will move a specific item to top of the list
 Feature #2: Show completed items - will show a separate list of all completed items
-Feature #3: Allow a user to have multiple lists with different Todo List names
-Feature #4 : added some error handling 
+Feature #3: Create a user class that can have a list of todo lists with different Todo List names, add remove and add as well as list methods
+Feature #4 : added some error handling
